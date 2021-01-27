@@ -1,82 +1,42 @@
 <html>
-
   <head>
-
-    <title>Tutorial Website</title>
-
+    <title></title>
     <meta content="">
-<meta charset="utf-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Meta Image icon -->
-
-<link href='https://raw.githubusercontent.com/mascemplon/blog/main/gambar/favicon.ico' rel='icon' type='image/x-icon'>
-
-<!-- Meta Descripsi -->
-
-<meta name="Description" content="ini adalaha Tutorial Website yang di buat untuk belajar dengan ketentuan  google serta seo friendly oke jangan lupa berkunjung pada website ini yah">
-
-<!-- Meta robot untuk index -->
-
-<meta name="googlebot" content="index, follow" />
-
-    <!-- Meta Image icon -->
- 
-<link href='https://raw.githubusercontent.com/mascemplon/blog/main/gambar/favicon.ico' rel='icon' type='image/x-icon'>
- 
-
- <!-- Meta keywords -->
- <meta content="Tutorial Website, " name="keywords">
- <meta content="Tutorial Website" property="article:tag">
- <!-- Link Canonical -->
-<link href='https://postkomik.github.io/tutorial-website/artikel/tutorial-website.html' rel='canonical'>
-<link href='https://postkomik.github.io/tutorial-website/artikel/tutorial-website.html' hreflang='x-default' rel='alternate'>
-
-<meta name='twitter:site' content=''>
- <meta name='twitter:creator' content=''>
-<!-- Meta vertivikasi console -->
-
-
-    <meta name="google-site-verification" content="yV1mFzCzvKuVDslsDJSuYuZjMCvY2CHWKmvJV-hxwkI" />
-
-<!--Meta sitelink -->
-
- <script type="application/ld+json">
-
-    {
-
-      "@context": "https://schema.org",
-
-      "@type": "WebSite",
-
-      "url": "https://postkomik.github.io/tutorial-website/index.html",
-
-      "potentialAction": {
-
-        "@type": "SearchAction",
-
-        "target": "https://query.postkomik.github.io/tutorial-website/search?q={search_term_string}",
-
-        "query-input": "required name=search_term_string"
-
-      }
-
-    }
-
-    </script>
-
-<!-- Meta Image -->
-
-<meta content='https://1.bp.blogspot.com/-WHsEQMcM-Bc/X-2Fcyn9F1I/AAAAAAAAN-k/M_W2j_CRUsU8s25I8X8ZLZseYprR877mwCLcBGAsYHQ/s16000/baca%2Bmanga.png' property='og:image'>
     <style></style>
-
   </head>
-
   <body>
   
-  <p>Di era digital seperti sekarang, banyak kegiatan dilakukan di handphone. Salah satunya membaca. Nah, kali ini kami akan membahas cara baca manga, manhwa, manhua, atau komik online lain di Android, seperti komik Solo Leveling lang lagi ngetop. Yah, siapa tahu ada pecinta komik yang belum tahu. Memang sudah ada website seperti postkomik atau postkomik blogspot. website tersebut juga menyediakan berbagai komik online. Bahkan banyak di antara komik Korea keren terdapat di sana Namun ijinkan kami menawarkan website platform blogger sebagai cara baca manga dan komik online di blog. Kenapa? Karena website ini merupakan proyek probadi dan banyak memiliki sumber komik. Sebelumnya, ada sedikit peringatan. Proses di bawah mungkin sedikit kelihatan rumit (walau sebenarnya tidak). Tapi lumayan sepadan kok. Karena website ini gratis dan enak di kunjungin</p>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+var d = new Date();
+$("#date").html(d.getDate() + "/" + (d.getMonth()+1) + "/" + d.getFullYear());
+    $.ajax({url: "https://api.kawalcorona.com/indonesia/", success: function(result){
+     $("#terjangkit").html(result[0].positif);
+     $("#sembuh").html(result[0].sembuh);
+     $("#meninggal").html(result[0].meninggal);
+    }});
+});
+</script>
+
+<div class="bisablog-card">
+    <div class="bisablog-info"><h2>DATA COVID-19 INDONESIA</h2></div>
+    <p class="bisablog-positif">&#128567 Positif: <span id="terjangkit"></span></p>
+    <p class="bisablog-sembuh">&#128522 Sembuh: <span id="sembuh"></span></p>
+    <p class="bisablog-meninggal">&#128557 Meninggal: <span id="meninggal"></span></p>
+    <div class="bisablog-info"><span><em>(kawal corona)</em></span></div>
+</div>
+
+<style>
+.bisablog-card {padding: 5%; border:1px solid #eaeaea; background:#f4f4f4;border-radius:10px}
+.bisablog-card p {color:#fff}
+.bisablog-positif {background:#e53935}
+.bisablog-sembuh {background:#43a047}
+.bisablog-meninggal {padding:10px 7px; background:#546e7a}
+.bisablog-positif, .bisablog-sembuh {padding:10px 7px; margin-bottom:1em}
+.bisablog-info {text-align:center}
+.bisablog-card p{font-weight:bold}
+</style>
   
   </body>
-
 </html>
