@@ -18,20 +18,19 @@ font-size: 100%;
 
     </style>
     
-    <script src='//cdn.firebase.com/js/client/2.2.1/firebase.js' type='text/javascript'/>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js' type='text/javascript'/>
-<script async='async' type='text/javascript'>
+  <script src='//cdn.firebase.com/js/client/2.2.1/firebase.js' type='text/javascript'/>
+<script type="text/javascript">
 //<![CDATA[
 $.each($(".post-view[data-id]"), function(a, e) {
 var l = $(e).parent().find("#postviews").addClass("view-load"),
-i = new Firebase("https://abdlnatsir-id.firebaseio.com/pages/id/" + $(e).attr("data-id"));
-i.once("value", function(a) {
-var n = a.val(),
-t = !1;
-null == n && (n = {}, n.value = 0, n.url = window.location.href, n.id = $(e).attr("data-id"), t = !0), l.removeClass("view-load").text(n.value), n.value++, "/" != window.location.pathname && (t ? i.set(n) : i.child("value").set(n.value))
-})
-});
-//]]>
+i = new Firebase("https://my-komptik-id.firebaseio.com/pages/id/" + $(e).attr("data-id"));
+        i.once("value", function(a) {
+            var n = a.val(),
+                t = !1;
+            null == n && (n = {}, n.value = 0, n.url = window.location.href, n.id = $(e).attr("data-id"), t = !0), l.removeClass("view-load").text(n.value), n.value++, "/" != window.location.pathname && (t ? i.set(n) : i.child("value").set(n.value))
+        })
+    });
+    //]]>
 </script>
   </head>
   <body>
