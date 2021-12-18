@@ -64,15 +64,7 @@
                                 </span>
                             </span>
                             <span class="navlef">
-                                <span class="npv r">
-                                    <div class="nextprev">
-                                        <a class="ch-prev-btn" href="https://kiryuu.id/cheating-men-must-die-chapter-41/" rel="prev">
-                                            <i class="fas fa-angle-left"></i> Prev </a>
-                                        <a class="ch-next-btn" href="https://kiryuu.id/cheating-men-must-die-chapter-43/" rel="next">
-                                            Next <i class="fas fa-angle-right"></i>
-                                        </a>
-                                    </div>
-                                </span>
+                               {% include chapnex.html %}
 
                                 <span class="dlx r"><a href="{{ site.url }}{{ site.baseurl }}/komik/{{ page.category }}" target="_blank"><i class="fas fa-cloud-download-alt"></i> Download</a></span> </span>
                         </div>
@@ -99,15 +91,7 @@
                                 </div>
                             </span>
                             <span class="amob">
-                                <span class="npv r">
-                                    <div class="nextprev">
-                                        <a class="ch-prev-btn" href="https://kiryuu.id/cheating-men-must-die-chapter-41/" rel="prev">
-                                            <i class="fas fa-angle-left"></i> Prev </a>
-                                        <a class="ch-next-btn" href="https://kiryuu.id/cheating-men-must-die-chapter-43/" rel="next">
-                                            Next <i class="fas fa-angle-right"></i>
-                                        </a>
-                                    </div>
-                                </span>
+                                {% include chapnex.html %}
 
                                 <span class="selector pagedsel r">
                                     <select name="select-paged" class="ts-select-paged" id="select-paged">
@@ -183,10 +167,10 @@
 </div>
     {% include footer.html %}
 <script type='text/javascript'>
-$(".separator a:has(img)").each(function() { $(this).replaceWith($(this).children()); });
-</script>
-<script async="async" src="{{ site.baseurl }}/assets/js/lazyload.js" type="text/javascript"></script>
 
+$(".separator a:has(img)").each(function() { $(this).replaceWith($(this).children()); });
+
+</script>
 </body>
 
 </html>
